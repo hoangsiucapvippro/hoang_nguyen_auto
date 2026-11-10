@@ -144,7 +144,6 @@ function AboutUs() {
                     src={`${process.env.PUBLIC_URL}/image/${car.image}`}
                     alt={`${car.brand} ${car.model}`}
                     className="card-img-top object-fit-cover"
-                    loading="lazy"
                   />
                 </div>
                 <div className="card-body">
@@ -177,7 +176,6 @@ function AboutUs() {
                     src={`${process.env.PUBLIC_URL}/image/Toyota_Corolla_Cross.jpg`}
                     alt="Toyota Corolla Cross"
                     className="rounded-3 object-fit-cover"
-                    loading="lazy"
                   />
                 </div>
               </div>
@@ -187,7 +185,6 @@ function AboutUs() {
                     src={`${process.env.PUBLIC_URL}/image/Mercedes-Benz_C_200_Avantgarde.jpg`}
                     alt="Mercedes-Benz C 200 Avantgarde"
                     className="rounded-3 object-fit-cover"
-                    loading="lazy"
                   />
                 </div>
               </div>
@@ -197,7 +194,6 @@ function AboutUs() {
                     src={`${process.env.PUBLIC_URL}/image/VinFast_VF5.jpg`}
                     alt="VinFast VF5"
                     className="rounded-3 object-fit-cover"
-                    loading="lazy"
                   />
                 </div>
               </div>
@@ -207,7 +203,6 @@ function AboutUs() {
                     src={`${process.env.PUBLIC_URL}/image/BMW_320i_Sport_Line.jpg`}
                     alt="BMW 320i Sport Line"
                     className="rounded-3 object-fit-cover"
-                    loading="lazy"
                   />
                 </div>
               </div>

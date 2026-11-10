@@ -23,7 +23,6 @@ function CarList() {
   const [categories, setCategories] = useState([]);
 
   const [selectedCar, setSelectedCar] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   const [search, setSearch] = useState("");
@@ -35,7 +34,6 @@ function CarList() {
 
   const loadData = async () => {
     try {
-      setLoading(true);
       setError("");
 
       const carRes = await axios.get(API_CARS);
@@ -48,8 +46,6 @@ function CarList() {
     } catch (error) {
       console.log(error);
       setError("Không thể tải danh sách xe!");
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -297,7 +293,10 @@ function CarList() {
                 <Col md={6}></Col>
                 <Col md={6}>
                   <Button
-                    variant="outline-dark"
+                    disabled={selectedCar.status !== "In Stock"}
+                    variant={
+                      selectedCar.status === "In Stock" ? "outline-danger" : "outline-secondary"
+                    }
                     onClick={() =>
                       naivigate(
                         `/hoangnguyen_auto/test-drive/${selectedCar.id || selectedCar}`,
@@ -309,12 +308,15 @@ function CarList() {
                 </Col>
                 <Col md={6}>
                   <Button
-                    variant="outline-dark"
+                    variant={
+                      selectedCar.status === "In Stock" ? "outline-danger" : "outline-secondary"
+                    }
                     onClick={() =>
                       naivigate(
                         `/hoangnguyen_auto/buying/${selectedCar.id || selectedCar}`,
                       )
                     }
+                    disabled={selectedCar.status !== "In Stock"}
                   >
                     Sở hữu ngay
                   </Button>

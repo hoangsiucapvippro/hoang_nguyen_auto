@@ -9,7 +9,6 @@ import {
   Form,
   Modal,
   Row,
-  Spinner,
   Table,
 } from "react-bootstrap";
 import { getCarImage } from "../components/CarCard";

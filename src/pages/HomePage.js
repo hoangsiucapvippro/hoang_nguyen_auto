@@ -9,7 +9,6 @@ import {
   Container,
   Modal,
   Row,
-  Spinner,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import CarCard, { getCarImage } from "../components/CarCard";
@@ -77,7 +76,6 @@ function HomePage() {
   const [cars, setCars] = useState([]);
   const [brands, setBrands] = useState([]);
   const [selectedCar, setSelectedCar] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -91,9 +89,6 @@ function HomePage() {
         setBrands(brandResponse.data);
       } catch (loadError) {
         console.error("Error loading homepage data:", loadError);
-        setError("Không thể tải dữ liệu xe. Vui lòng thử tải lại trang.");
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -240,9 +235,7 @@ function HomePage() {
             </Alert>
           )}
 
-          {loading ? (
-            <div></div>
-          ) : !error && showcaseCars.length === 0 ? (
+          {!error && showcaseCars.length === 0 ? (
             <Alert variant="light">Hiện chưa có xe để hiển thị.</Alert>
           ) : (
             !error && (

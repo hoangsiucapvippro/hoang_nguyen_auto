@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Alert, Badge, Container, Spinner, Table } from "react-bootstrap";
+import { Alert, Badge, Container, Table } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 
 const API_URL = "http://localhost:9999";
@@ -12,7 +12,6 @@ function MyBooking() {
   const [showroomBookings, setShowroomBookings] = useState([]);
   const [cars, setCars] = useState([]);
   const [showrooms, setShowrooms] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -21,13 +20,11 @@ function MyBooking() {
     try {
       user = JSON.parse(localStorage.getItem("user") || "null");
     } catch {
-      setLoading(false);
       setError("Không thể đọc thông tin người dùng.");
       return;
     }
 
     if (!user?.id) {
-      setLoading(false);
       return;
     }
 
@@ -54,8 +51,6 @@ function MyBooking() {
       } catch (loadError) {
         console.error("Unable to load booking history:", loadError);
         setError("Không thể tải lịch sử đăng ký. Vui lòng thử lại.");
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -72,7 +67,7 @@ function MyBooking() {
         <thead className="table-dark">
           <tr>
             <th>STT</th>
-            <th>Mã đăng ký</th>
+
             <th>Showroom</th>
             <th>Ngày hẹn</th>
             <th>Khung giờ</th>
@@ -87,7 +82,7 @@ function MyBooking() {
             bookings.map((booking, index) => (
               <tr key={`${type}-${booking.id}`}>
                 <td>{index + 1}</td>
-                <td>#{booking.id}</td>
+
                 <td>{getShowroomName(booking.showroomId)}</td>
                 <td>{booking.bookingDate || "Chưa cập nhật"}</td>
                 <td>{booking.timeSlot || "Chưa cập nhật"}</td>
@@ -131,32 +126,23 @@ function MyBooking() {
 
       {error && <Alert variant="danger">{error}</Alert>}
 
-      {loading ? (
-        <div className="text-center py-5">
-          <Spinner animation="border" variant="danger" />
-          <p className="mt-2">Đang tải lịch sử...</p>
-        </div>
-      ) : (
-        <>
-          <section className="mb-5">
-            <h4 className="fw-bold mb-3">
-              <i className="bi bi-calendar-check-fill text-danger me-2"></i>
-              Lịch hẹn mua xe
-            </h4>
+      <section className="mb-5">
+        <h4 className="fw-bold mb-3">
+          <i className="bi bi-calendar-check-fill text-danger me-2"></i>
+          Lịch hẹn mua xe
+        </h4>
 
-            {renderBookingTable(showroomBookings, "showroom")}
-          </section>
+        {renderBookingTable(showroomBookings, "showroom")}
+      </section>
 
-          <section className="mb-5">
-            <h4 className="fw-bold mb-3">
-              <i className="bi bi-car-front-fill text-danger me-2"></i>
-              Lịch đăng ký lái thử
-            </h4>
+      <section className="mb-5">
+        <h4 className="fw-bold mb-3">
+          <i className="bi bi-car-front-fill text-danger me-2"></i>
+          Lịch đăng ký lái thử
+        </h4>
 
-            {renderBookingTable(testDrives, "test-drive")}
-          </section>
-        </>
-      )}
+        {renderBookingTable(testDrives, "test-drive")}
+      </section>
     </Container>
   );
 }

@@ -88,7 +88,6 @@
   ],
   "cars": [
     {
-      "id": "1",
       "name": "VinFast VF3",
       "brandId": "1",
       "categoryId": "3",
@@ -107,7 +106,10 @@
         "Đen"
       ],
       "description": "Mẫu xe điện Mini SUV đô thị nhỏ gọn, cá tính và giá rẻ nhất thị trường.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "1"
     },
     {
       "id": "2",

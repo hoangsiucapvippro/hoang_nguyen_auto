@@ -30,7 +30,6 @@ function Buying() {
     timeSlot: "",
     notes: "",
   });
-  const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
@@ -41,7 +40,6 @@ function Buying() {
       loggedInUser = userString ? JSON.parse(userString) : null;
     } catch {
       setError("Thông tin đăng nhập không hợp lệ. Vui lòng đăng nhập lại.");
-      setLoading(false);
       return;
     }
 
@@ -73,8 +71,6 @@ function Buying() {
       } catch (loadError) {
         console.error("Unable to load showroom booking form data:", loadError);
         setError("Không thể tải thông tin xe hoặc showroom. Vui lòng thử lại.");
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -144,10 +140,7 @@ function Buying() {
               </p>
               <h1 className="fw-bold mb-2">Đặt lịch đến showroom</h1>
 
-              {loading ? (
-                <p role="status">Đang tải thông tin...</p>
-              ) : (
-                <Form onSubmit={handleSubmit}>
+              <Form onSubmit={handleSubmit}>
                   <Row className="g-3">
                     <Col xs={12}>
                       <Form.Group controlId="buyingCar">
@@ -277,12 +270,11 @@ function Buying() {
                         variant="dark"
                         disabled={submitting}
                       >
-                        {submitting ? "Đang gửi..." : "Đặt lịch showroom"}
+                        Đặt lịch showroom
                       </Button>
                     </Col>
                   </Row>
-                </Form>
-              )}
+              </Form>
             </Card.Body>
           </Card>
         </Col>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import {
-  Alert,
+
   Button,
   Card,
   Col,
@@ -30,7 +30,6 @@ function TestDrive() {
     timeSlot: "",
     notes: "",
   });
-  const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
@@ -41,7 +40,6 @@ function TestDrive() {
       loggedInUser = userString ? JSON.parse(userString) : null;
     } catch {
       setError("Thông tin đăng nhập không hợp lệ. Vui lòng đăng nhập lại.");
-      setLoading(false);
       return;
     }
 
@@ -72,8 +70,6 @@ function TestDrive() {
         }
       } catch (loadError) {
         console.error("Unable to load test-drive form data:", loadError);
-      } finally {
-        setLoading(false);
       }
     };
 
@@ -153,10 +149,7 @@ function TestDrive() {
               </p>
               <h1 className="fw-bold mb-2">Đăng ký lái thử</h1>
 
-              {loading ? (
-                <p role="status">Đang tải thông tin...</p>
-              ) : (
-                <Form onSubmit={handleSubmit}>
+              <Form onSubmit={handleSubmit}>
                   <Row className="g-3">
                     <Col xs={12}>
                       <Form.Group controlId="testDriveCar">
@@ -280,12 +273,11 @@ function TestDrive() {
                         variant="dark"
                         disabled={submitting}
                       >
-                        {submitting ? "Đang gửi..." : "Xác nhận đăng ký"}
+                        Xác nhận đăng ký
                       </Button>
                     </Col>
                   </Row>
-                </Form>
-              )}
+              </Form>
             </Card.Body>
           </Card>
         </Col>

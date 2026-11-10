@@ -5,7 +5,6 @@ import {
   Badge,
   Button,
   Container,
-  Spinner,
   Table,
 } from "react-bootstrap";
 
@@ -16,13 +15,11 @@ function AdminBooking() {
   const [showroomBookings, setShowroomBookings] = useState([]);
   const [cars, setCars] = useState([]);
   const [showrooms, setShowrooms] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [actionError, setActionError] = useState("");
   const [updating, setUpdating] = useState({});
 
   const loadBookings = async () => {
-    setLoading(true);
     setError("");
 
     try {
@@ -45,8 +42,6 @@ function AdminBooking() {
     } catch (loadError) {
       console.error("Unable to load admin bookings:", loadError);
       setError("Không thể tải danh sách đăng ký. Vui lòng thử lại.");
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -145,7 +140,7 @@ function AdminBooking() {
                         disabled={Boolean(updating[key])}
                         onClick={() => markCompleted(booking, type)}
                       >
-                        {updating[key] ? "Đang cập nhật..." : "Đánh dấu hoàn thành"}
+                        Đánh dấu hoàn thành
                       </Button>
                     )}
                   </td>
@@ -182,7 +177,6 @@ function AdminBooking() {
           <Button
             variant="outline-danger"
             onClick={loadBookings}
-            disabled={loading}
           >
             Tải lại
           </Button>
@@ -198,24 +192,15 @@ function AdminBooking() {
         </Alert>
       )}
 
-      {loading ? (
-        <div className="text-center py-5">
-          <Spinner animation="border" variant="danger" role="status" />
-          <p className="mt-2">Đang tải danh sách đăng ký...</p>
-        </div>
-      ) : (
-        <>
-          <section className="mb-5">
-            <h4 className="fw-bold mb-3">Lịch hẹn mua xe</h4>
-            {renderBookingTable(showroomBookings, "showroom")}
-          </section>
+      <section className="mb-5">
+        <h4 className="fw-bold mb-3">Lịch hẹn mua xe</h4>
+        {renderBookingTable(showroomBookings, "showroom")}
+      </section>
 
-          <section className="mb-5">
-            <h4 className="fw-bold mb-3">Lịch đăng ký lái thử</h4>
-            {renderBookingTable(testDrives, "test-drive")}
-          </section>
-        </>
-      )}
+      <section className="mb-5">
+        <h4 className="fw-bold mb-3">Lịch đăng ký lái thử</h4>
+        {renderBookingTable(testDrives, "test-drive")}
+      </section>
     </Container>
   );
 }
