@@ -13,17 +13,33 @@
       "id": "2",
       "username": "user1",
       "password": "123",
-      "fullName": "Nguyễn Văn An",
+      "fullName": "Nguyễn Bá Hoàng",
       "email": "an.nguyen@gmail.com",
       "phone": "0912345678",
       "role": "user"
     }
   ],
   "brands": [
-    { "id": "1", "name": "VinFast", "country": "Việt Nam" },
-    { "id": "2", "name": "Toyota", "country": "Nhật Bản" },
-    { "id": "3", "name": "Mercedes-Benz", "country": "Đức" },
-    { "id": "4", "name": "Hyundai", "country": "Hàn Quốc" }
+    {
+      "id": "1",
+      "name": "VinFast",
+      "country": "Việt Nam"
+    },
+    {
+      "id": "2",
+      "name": "Toyota",
+      "country": "Nhật Bản"
+    },
+    {
+      "id": "3",
+      "name": "Mercedes-Benz",
+      "country": "Đức"
+    },
+    {
+      "id": "4",
+      "name": "BMW",
+      "country": "Đức"
+    }
   ],
   "categories": [
     {
@@ -83,9 +99,14 @@
       "transmission": "Tự động 1 cấp",
       "horsepower": "43 HP",
       "rangePerCharge": "210 km",
-      "colors": ["Vàng", "Xanh lá", "Hồng", "Trắng", "Đen"],
+      "colors": [
+        "Vàng",
+        "Xanh lá",
+        "Hồng",
+        "Trắng",
+        "Đen"
+      ],
       "description": "Mẫu xe điện Mini SUV đô thị nhỏ gọn, cá tính và giá rẻ nhất thị trường.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -100,9 +121,13 @@
       "transmission": "Tự động 1 cấp",
       "horsepower": "134 HP",
       "rangePerCharge": "326 km",
-      "colors": ["Cam", "Xanh dương", "Trắng", "Đen"],
+      "colors": [
+        "Cam",
+        "Xanh dương",
+        "Trắng",
+        "Đen"
+      ],
       "description": "SUV điện phân khúc A-SUV nhỏ gọn, thời trang, tối ưu di chuyển hàng ngày.",
-      "isFeatured": false,
       "status": "In Stock"
     },
     {
@@ -117,9 +142,13 @@
       "transmission": "Tự động 1 cấp",
       "horsepower": "201 HP",
       "rangePerCharge": "381 km",
-      "colors": ["Xanh lá", "Xám", "Trắng", "Đen"],
+      "colors": [
+        "Xanh lá",
+        "Xám",
+        "Trắng",
+        "Đen"
+      ],
       "description": "SUV điện phân khúc B hiện đại, thiết kế tinh tế do Torino Design đảm nhận.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -134,9 +163,13 @@
       "transmission": "Tự động AWD",
       "horsepower": "349 HP",
       "rangePerCharge": "431 km",
-      "colors": ["Đỏ", "Xanh VinFast", "Đen", "Trắng"],
+      "colors": [
+        "Đỏ",
+        "Xanh VinFast",
+        "Đen",
+        "Trắng"
+      ],
       "description": "SUV điện C-SUV phong cách vũ trụ phi thuyền phá cách, tăng tốc cực ấn tượng.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -151,9 +184,12 @@
       "transmission": "Tự động AWD",
       "horsepower": "349 HP",
       "rangePerCharge": "420 km",
-      "colors": ["Trắng", "Đen", "Xanh dương"],
+      "colors": [
+        "Trắng",
+        "Đen",
+        "Xanh dương"
+      ],
       "description": "SUV điện D-SUV thông minh trang bị trợ lý ảo Viva và công nghệ ADAS.",
-      "isFeatured": false,
       "status": "In Stock"
     },
     {
@@ -168,9 +204,13 @@
       "transmission": "Tự động AWD",
       "horsepower": "402 HP",
       "rangePerCharge": "400 km",
-      "colors": ["Đỏ", "Trắng", "Đen", "Xanh VinFast"],
+      "colors": [
+        "Đỏ",
+        "Trắng",
+        "Đen",
+        "Xanh VinFast"
+      ],
       "description": "Phiên bản VF8 nâng cấp công suất 402 mã lực, nội thất da cao cấp.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -185,9 +225,12 @@
       "transmission": "Tự động AWD",
       "horsepower": "402 HP",
       "rangePerCharge": "438 km",
-      "colors": ["Ghi xám", "Trắng", "Đen"],
+      "colors": [
+        "Ghi xám",
+        "Trắng",
+        "Đen"
+      ],
       "description": "SUV điện cỡ lớn 7 chỗ hạng E sang trọng dành cho doanh nhân và gia đình.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -202,9 +245,13 @@
       "transmission": "Tự động vô cấp CVT",
       "horsepower": "106 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Vàng cát", "Trắng", "Đen", "Đỏ"],
+      "colors": [
+        "Vàng cát",
+        "Trắng",
+        "Đen",
+        "Đỏ"
+      ],
       "description": "Mẫu sedan quốc dân bền bỉ, tiết kiệm nhiên liệu hàng đầu phân khúc B.",
-      "isFeatured": false,
       "status": "In Stock"
     },
     {
@@ -219,9 +266,12 @@
       "transmission": "Tự động E-CVT",
       "horsepower": "110 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Cam Đen", "Nâu Đen", "Trắng ngọc trai"],
+      "colors": [
+        "Cam Đen",
+        "Nâu Đen",
+        "Trắng ngọc trai"
+      ],
       "description": "B-SUV động cơ Hybrid siêu tiết kiệm xăng cùng cửa sổ trời toàn cảnh.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -236,9 +286,13 @@
       "transmission": "Tự động CVT",
       "horsepower": "138 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Xanh xám", "Đỏ", "Đen", "Trắng"],
+      "colors": [
+        "Xanh xám",
+        "Đỏ",
+        "Đen",
+        "Trắng"
+      ],
       "description": "SUV đô thị nhập khẩu Thái Lan trang bị gói Toyota Safety Sense thế hệ mới.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -253,9 +307,12 @@
       "transmission": "Tự động E-CVT",
       "horsepower": "122 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Xám bạt", "Trắng ngọc trai", "Đen"],
+      "colors": [
+        "Xám bạt",
+        "Trắng ngọc trai",
+        "Đen"
+      ],
       "description": "Sedan C sang trọng, vận hành êm ái nhờ công nghệ xăng lai điện Hybrid.",
-      "isFeatured": false,
       "status": "In Stock"
     },
     {
@@ -270,9 +327,11 @@
       "transmission": "Tự động CVT 10 cấp giả lập",
       "horsepower": "170 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Đen", "Trắng ngọc trai"],
+      "colors": [
+        "Đen",
+        "Trắng ngọc trai"
+      ],
       "description": "Sedan hạng D doanh nhân thời thượng với hàng ghế sau chỉnh điện cao cấp.",
-      "isFeatured": false,
       "status": "In Stock"
     },
     {
@@ -287,9 +346,11 @@
       "transmission": "Tự động 8 cấp",
       "horsepower": "207 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Đen", "Trắng ngọc trai"],
+      "colors": [
+        "Đen",
+        "Trắng ngọc trai"
+      ],
       "description": "Phiên bản Camry cao cấp động cơ 2.5L cực kỳ đằm chắc và uy quyền.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -304,9 +365,11 @@
       "transmission": "Tự động 6 cấp 4WD",
       "horsepower": "201 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Trắng ngọc trai", "Đen"],
+      "colors": [
+        "Trắng ngọc trai",
+        "Đen"
+      ],
       "description": "SUV 7 chỗ việt dại đích thực, khung gầm chắc chắn và khả năng vượt địa hình vô địch.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -321,9 +384,12 @@
       "transmission": "Tự động 9 cấp 9G-TRONIC",
       "horsepower": "204 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Trắng Polar", "Đen Obsidian", "Xanh Cavansite"],
+      "colors": [
+        "Trắng Polar",
+        "Đen Obsidian",
+        "Xanh Cavansite"
+      ],
       "description": "Sedan hạng sang trẻ trung với ngôn ngữ thiết kế mới và đèn viền 64 màu.",
-      "isFeatured": false,
       "status": "In Stock"
     },
     {
@@ -338,9 +404,12 @@
       "transmission": "Tự động 9 cấp 9G-TRONIC",
       "horsepower": "258 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Đỏ Hyacinth", "Trắng Polar", "Đen Obsidian"],
+      "colors": [
+        "Đỏ Hyacinth",
+        "Trắng Polar",
+        "Đen Obsidian"
+      ],
       "description": "Phiên bản thể thao AMG Line mạnh mẽ, mâm xe 19 inch AMG và cửa sổ trời panoramic.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -355,9 +424,12 @@
       "transmission": "Tự động 9 cấp",
       "horsepower": "197 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Đen", "Trắng", "Nâu"],
+      "colors": [
+        "Đen",
+        "Trắng",
+        "Nâu"
+      ],
       "description": "Sedan doanh nhân lịch lãm với lưới tản nhiệt truyền thống logo nổi sang trọng.",
-      "isFeatured": false,
       "status": "In Stock"
     },
     {
@@ -372,9 +444,12 @@
       "transmission": "Tự động 9 cấp 4MATIC",
       "horsepower": "204 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Trắng Polar", "Đen Obsidian", "Xám Graphite"],
+      "colors": [
+        "Trắng Polar",
+        "Đen Obsidian",
+        "Xám Graphite"
+      ],
       "description": "SUV hạng sang bán chạy bậc nhất với màn hình trung tâm cảm ứng 11.9 inch.",
-      "isFeatured": false,
       "status": "In Stock"
     },
     {
@@ -389,9 +464,12 @@
       "transmission": "Tự động 9 cấp 4MATIC",
       "horsepower": "258 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Đen Obsidian", "Trắng Polar", "Xanh Cavansite"],
+      "colors": [
+        "Đen Obsidian",
+        "Trắng Polar",
+        "Xanh Cavansite"
+      ],
       "description": "Phiên bản GLC cao cấp tích hợp loa Burmester 15 loa và hệ thống treo khí nén.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
@@ -406,111 +484,212 @@
       "transmission": "Tự động 9 cấp 9G-TRONIC",
       "horsepower": "367 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Đen Onyx", "Trắng Cashmere", "Bạc High-tech"],
+      "colors": [
+        "Đen Onyx",
+        "Trắng Cashmere",
+        "Bạc High-tech"
+      ],
       "description": "Đỉnh cao sedan hạng sang cỡ lớn đỉnh đạc, ghế thương gia massage đá nóng.",
-      "isFeatured": true,
       "status": "In Stock"
     },
     {
       "id": "21",
-      "name": "Hyundai Accent 1.4 AT Đặc biệt",
+      "name": "BMW 320i Sport Line",
       "brandId": "4",
       "categoryId": "2",
-      "price": 569000000,
+      "price": 1499000000,
       "fuelType": "Gasoline",
       "seats": 5,
       "year": 2024,
-      "transmission": "Tự động 6 cấp",
-      "horsepower": "100 HP",
+      "transmission": "Tự động 8 cấp Steptronic",
+      "horsepower": "184 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Trắng", "Đen", "Đỏ", "Vàng cát"],
-      "description": "Sedan hạng B thiết kế hiện đại, nhiều trang bị tiện nghi trong tầm giá.",
-      "isFeatured": false,
+      "colors": [
+        "Trắng Alpine",
+        "Đen Sapphire",
+        "Xanh Phytonic"
+      ],
+      "description": "Sedan hạng sang cỡ nhỏ phong cách thể thao, cảm giác lái đỉnh cao chuẩn Đức.",
       "status": "In Stock"
     },
     {
       "id": "22",
-      "name": "Hyundai Creta 1.5L Cao cấp",
+      "name": "BMW 330i M Sport",
       "brandId": "4",
-      "categoryId": "1",
-      "price": 699000000,
+      "categoryId": "2",
+      "price": 1869000000,
       "fuelType": "Gasoline",
       "seats": 5,
       "year": 2024,
-      "transmission": "Tự động IVT",
-      "horsepower": "115 HP",
+      "transmission": "Tự động 8 cấp Steptronic Sport",
+      "horsepower": "258 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Đỏ", "Trắng", "Đen", "Xám"],
-      "description": "B-SUV thời trang phong cách 'Tucson thu nhỏ' trang bị gói Hyundai SmartSense.",
-      "isFeatured": true,
+      "colors": [
+        "Xanh Portimao",
+        "Đen Sapphire",
+        "Trắng Alpine"
+      ],
+      "description": "Phiên bản 3-Series thể thao với gói khí động học M Sport và phanh hiệu năng cao.",
       "status": "In Stock"
     },
     {
       "id": "23",
-      "name": "Hyundai Elantra N-Line",
+      "name": "BMW 520i M Sport",
       "brandId": "4",
       "categoryId": "2",
-      "price": 799000000,
+      "price": 2299000000,
       "fuelType": "Gasoline",
       "seats": 5,
       "year": 2024,
-      "transmission": "Tự động ly hợp kép 7 cấp DCT",
-      "horsepower": "204 HP",
+      "transmission": "Tự động 8 cấp Steptronic",
+      "horsepower": "190 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Đỏ", "Trắng", "Đen"],
-      "description": "Sedan hạng C mang phong cách thể thao N-Line tăng tốc thể thao mạnh mẽ.",
-      "isFeatured": false,
+      "colors": [
+        "Đen Sapphire",
+        "Xanh Phytonic",
+        "Trắng Alpine"
+      ],
+      "description": "Sedan hạng E sang trọng dành cho doanh nhân với màn hình cong BMW Curved Display kép.",
       "status": "In Stock"
     },
     {
       "id": "24",
-      "name": "Hyundai Tucson 2.0L Diesel Đặc biệt",
+      "name": "BMW X3 xDrive20i M Sport",
       "brandId": "4",
       "categoryId": "1",
-      "price": 959000000,
-      "fuelType": "Diesel",
+      "price": 2159000000,
+      "fuelType": "Gasoline",
       "seats": 5,
       "year": 2024,
-      "transmission": "Tự động 8 cấp",
-      "horsepower": "186 HP",
+      "transmission": "Tự động 8 cấp xDrive",
+      "horsepower": "184 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Trắng", "Đen", "Đỏ đô", "Vàng cát"],
-      "description": "C-SUV thiết kế cắt xẻ phá cách, máy dầu vận hành tiết kiệm và bốc.",
-      "isFeatured": true,
+      "colors": [
+        "Xám Sophisto",
+        "Trắng Alpine",
+        "Đen Sapphire"
+      ],
+      "description": "SAV gầm cao đa dụng với hệ dẫn động 2 cầu thông minh xDrive và khoang hành lý rộng rãi.",
       "status": "In Stock"
     },
     {
       "id": "25",
-      "name": "Hyundai Santa Fe 2.5 Turbo",
+      "name": "BMW X5 xDrive40i M Sport",
       "brandId": "4",
       "categoryId": "1",
-      "price": 1365000000,
+      "price": 3899000000,
       "fuelType": "Gasoline",
       "seats": 7,
       "year": 2024,
-      "transmission": "Tự động ly hợp kép 8 cấp DCT",
-      "horsepower": "281 HP",
+      "transmission": "Tự động 8 cấp xDrive",
+      "horsepower": "381 HP",
       "rangePerCharge": "N/A",
-      "colors": ["Đỏ mun", "Trắng", "Đen", "Xanh lục"],
-      "description": "Mẫu SUV 7 chỗ cơ bắp thiết kế H-Shape độc đáo, màn hình cong đôi 12.3 inch.",
-      "isFeatured": true,
+      "colors": [
+        "Đen Sapphire",
+        "Trắng Mineral",
+        "Xanh Phytonic"
+      ],
+      "description": "SAV hạng sang cỡ lớn 7 chỗ uy quyền, trang bị cửa hít, treo khí nén và đèn BMW Laserlight.",
       "status": "In Stock"
     },
     {
       "id": "26",
-      "name": "Hyundai IONIQ 5 Prestige",
+      "name": "BMW i4 eDrive40",
       "brandId": "4",
       "categoryId": "3",
-      "price": 1450000000,
+      "price": 3739000000,
       "fuelType": "Electric",
       "seats": 5,
       "year": 2024,
       "transmission": "Tự động 1 cấp",
-      "horsepower": "305 HP",
-      "rangePerCharge": "451 km",
-      "colors": ["Xám nhám", "Trắng", "Đen"],
-      "description": "Xe điện tương lai đạt giải Xe của năm thế giới, hỗ trợ sạc siêu nhanh 350kW.",
-      "isFeatured": true,
+      "horsepower": "340 HP",
+      "rangePerCharge": "590 km",
+      "colors": [
+        "Trắng Mineral",
+        "Đen Sapphire",
+        "Xanh Portimao"
+      ],
+      "description": "Gran Coupé thuần điện đầu tiên của BMW với phạm vi di chuyển vượt trội lên đến 590 km.",
+      "status": "In Stock"
+    },
+    {
+      "id": "27",
+      "name": "BMW 740i Pure Excellence",
+      "brandId": "4",
+      "categoryId": "2",
+      "price": 5199000000,
+      "fuelType": "Gasoline",
+      "seats": 5,
+      "year": 2024,
+      "transmission": "Tự động 8 cấp Steptronic",
+      "horsepower": "381 HP",
+      "rangePerCharge": "N/A",
+      "colors": [
+        "Đen Sapphire",
+        "Xám Oxide",
+        "Trắng Mineral"
+      ],
+      "description": "Sedan đỉnh cao phân khúc flagship với màn hình Theatre Screen 31 inch siêu rộng phía sau.",
+      "status": "In Stock"
+    },
+    {
+      "id": "28",
+      "name": "BMW X7 xDrive40i Pure Excellence",
+      "brandId": "4",
+      "categoryId": "1",
+      "price": 6299000000,
+      "fuelType": "Gasoline",
+      "seats": 7,
+      "year": 2024,
+      "transmission": "Tự động 8 cấp xDrive",
+      "horsepower": "381 HP",
+      "rangePerCharge": "N/A",
+      "colors": [
+        "Đen Carbon",
+        "Trắng Mineral",
+        "Xanh Tanzanite"
+      ],
+      "description": "SAV 7 chỗ cỡ lớn đỉnh cao với cửa sổ trời toàn cảnh Panorama Sky Lounge 15.000 điểm sáng.",
+      "status": "In Stock"
+    },
+    {
+      "id": "29",
+      "name": "BMW iX3 M Sport",
+      "brandId": "4",
+      "categoryId": "3",
+      "price": 3499000000,
+      "fuelType": "Electric",
+      "seats": 5,
+      "year": 2024,
+      "transmission": "Tự động 1 cấp",
+      "horsepower": "286 HP",
+      "rangePerCharge": "460 km",
+      "colors": [
+        "Trắng Mineral",
+        "Đen Carbon",
+        "Xanh Phytonic"
+      ],
+      "description": "SUV điện hạng sang kế thừa sự linh hoạt của X3 cùng công nghệ eDrive thế hệ 5.",
+      "status": "In Stock"
+    },
+    {
+      "id": "30",
+      "name": "BMW Z4 sDrive30i M Sport",
+      "brandId": "4",
+      "categoryId": "2",
+      "price": 3599000000,
+      "fuelType": "Gasoline",
+      "seats": 2,
+      "year": 2024,
+      "transmission": "Tự động 8 cấp Steptronic Sport",
+      "horsepower": "258 HP",
+      "rangePerCharge": "N/A",
+      "colors": [
+        "Đỏ San Francisco",
+        "Xanh Thundernight",
+        "Trắng Alpine"
+      ],
+      "description": "Xe thể thao mui trần 2 chỗ phóng khoáng, tăng tốc 0-100km/h chỉ trong 5.4 giây.",
       "status": "In Stock"
     }
   ],
@@ -520,7 +699,7 @@
       "userId": "2",
       "carId": "6",
       "showroomId": "1",
-      "customerName": "Nguyễn Văn An",
+      "customerName": "Nguyễn Bá Hoàng",
       "phone": "0912345678",
       "email": "an.nguyen@gmail.com",
       "bookingDate": "2026-11-20",
@@ -528,6 +707,64 @@
       "notes": "Muốn chạy thử xe VinFast VF8 trên đường cao tốc",
       "status": "Pending",
       "createdAt": "2026-11-09T10:30:00Z"
+    },
+    {
+      "carId": "2",
+      "showroomId": "1",
+      "customerName": "Nguyễn Bá Hoàng",
+      "phone": "(+84) 946 572 204",
+      "email": "an.nguyen@gmail.com",
+      "bookingDate": "2026-11-26",
+      "timeSlot": "13:30 - 15:00",
+      "notes": "",
+      "id": "2",
+      "userId": "2",
+      "status": "Pending",
+      "createdAt": "2026-11-10T21:29:14.663Z"
+    }
+  ],
+  "showroomBookings": [
+    {
+      "carId": "3",
+      "showroomId": "2",
+      "customerName": "Nguyễn Bá Hoàng",
+      "phone": "0912345678",
+      "email": "an.nguyen@gmail.com",
+      "bookingDate": "2027-04-22",
+      "timeSlot": "13:30 - 15:00",
+      "notes": "",
+      "userId": "2",
+      "status": "Completed",
+      "createdAt": "2026-11-10T20:32:25.537Z",
+      "id": 1
+    },
+    {
+      "carId": "2",
+      "showroomId": "1",
+      "customerName": "Nguyễn Bá Hoàng",
+      "phone": "0912345678",
+      "email": "nbhhoangnguyen@gmail.com",
+      "bookingDate": "2026-11-10",
+      "timeSlot": "10:30 - 12:00",
+      "notes": "ád",
+      "userId": "2",
+      "status": "Pending",
+      "createdAt": "2026-11-10T21:26:21.359Z",
+      "id": 2
+    },
+    {
+      "carId": "2",
+      "showroomId": "2",
+      "customerName": "Nguyễn Bá Hoàng",
+      "phone": "0912345678",
+      "email": "an.nguyen@gmail.com",
+      "bookingDate": "2026-11-19",
+      "timeSlot": "13:30 - 15:00",
+      "notes": "",
+      "userId": "2",
+      "status": "Pending",
+      "createdAt": "2026-11-10T21:30:03.785Z",
+      "id": 3
     }
   ]
 }

@@ -46,7 +46,7 @@ function Login() {
         alert("Dang nhap thanh cong");
 
         if (logInUser.role === "admin") {
-          navigate("/admin");
+          navigate("/hoangnguyen_auto");
         } else {
           navigate("/hoangnguyen_auto");
         }
@@ -68,13 +68,13 @@ function Login() {
         style={{ maxWidth: "400px", margin: "0 auto" }}
       >
         <Card.Header>
-          <h3>Login</h3>
+          <h3>Đăng nhập</h3>
         </Card.Header>
         <Card.Body>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="username" className="form-label">
-                Username
+                Tên đăng nhập
               </label>
               <input
                 type="text"
@@ -87,7 +87,7 @@ function Login() {
             </div>
             <div className="mb-3">
               <label htmlFor="password" className="form-label">
-                Password
+                Mật khẩu
               </label>
               <input
                 type="password"
@@ -108,7 +108,7 @@ function Login() {
               className="btn btn-primary"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Dang dang nhap..." : "Login"}
+              {isSubmitting ? "Dang dang nhap..." : "Đăng nhập"}
             </button>
           </form>
         </Card.Body>

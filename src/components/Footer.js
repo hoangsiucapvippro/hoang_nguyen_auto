@@ -20,7 +20,7 @@ function Footer() {
             <h5> Hoàng Nguyễn Auto</h5>
             <p>
               Hệ thống phân phối xe ô tô hàng đầu Việt Nam. Cung cấp các dòng xe
-              mới nhất từ VinFast, Toyota, Mercedes-Benz và Hyundai với mức giá
+              mới nhất từ VinFast, Toyota, Mercedes-Benz và BMW với mức giá
               ưu đãi và dịch vụ lái thử tận nơi.
             </p>
           </Col>
@@ -52,7 +52,8 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="text-decoration-none text-light">
+                <Link className="text-decoration-none text-light"
+                to="/login">
                   Đăng nhập
                 </Link>
               </li>
