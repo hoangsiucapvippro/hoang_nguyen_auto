@@ -78,21 +78,24 @@ function HomePage() {
   const [selectedCar, setSelectedCar] = useState(null);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    const loadHomeData = async () => {
-      try {
-        const [carResponse, brandResponse] = await Promise.all([
-          axios.get(API_CARS),
-          axios.get(API_BRANDS),
-        ]);
-        setCars(carResponse.data);
-        setBrands(brandResponse.data);
-      } catch (loadError) {
-        console.error("Error loading homepage data:", loadError);
-      }
-    };
+  const loadData = async () => {
+    setError("");
 
-    loadHomeData();
+    try {
+      const [carResponse, brandResponse] = await Promise.all([
+        axios.get(API_CARS),
+        axios.get(API_BRANDS),
+      ]);
+      setCars(carResponse.data);
+      setBrands(brandResponse.data);
+    } catch (loadError) {
+      console.error("Error loading homepage data:", loadError);
+      setError("Không thể tải dữ liệu trang chủ. Vui lòng thử lại.");
+    }
+  };
+
+  useEffect(() => {
+    loadData();
   }, []);
 
   const showcaseCars = [];

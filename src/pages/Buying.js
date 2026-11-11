@@ -32,11 +32,14 @@ function Buying() {
   });
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const availableCars = cars.filter((item) => item.status === "In Stock");
 
-  useEffect(() => {
-    const userString = localStorage.getItem("user");
+  const loadFormData = async () => {
+    setError("");
     let loggedInUser;
+
     try {
+      const userString = localStorage.getItem("user");
       loggedInUser = userString ? JSON.parse(userString) : null;
     } catch {
       setError("Thông tin đăng nhập không hợp lệ. Vui lòng đăng nhập lại.");
@@ -45,35 +48,38 @@ function Buying() {
 
     setUser(loggedInUser);
 
-    const loadFormData = async () => {
-      try {
-        const [carsResponse, showroomsResponse] = await Promise.all([
-          axios.get(`${API_URL}/cars`),
-          axios.get(`${API_URL}/showrooms`),
-        ]);
-        setCars(carsResponse.data);
-        setShowrooms(showroomsResponse.data);
+    try {
+      const [carsResponse, showroomsResponse] = await Promise.all([
+        axios.get(`${API_URL}/cars`),
+        axios.get(`${API_URL}/showrooms`),
+      ]);
+      setCars(carsResponse.data);
+      setShowrooms(showroomsResponse.data);
 
-        if (carId) {
-          const selectedCar = carsResponse.data.find(
-            (item) => String(item.id) === String(carId),
-          );
-          if (!selectedCar) {
-            setError("Không tìm thấy mẫu xe đã chọn.");
-          } else {
-            setCar(selectedCar);
-            setForm((current) => ({
-              ...current,
-              carId: String(selectedCar.id),
-            }));
-          }
+      if (carId) {
+        const selectedCar = carsResponse.data.find(
+          (item) =>
+            String(item.id) === String(carId) && item.status === "In Stock",
+        );
+        if (!selectedCar) {
+          setCar(null);
+          setForm((current) => ({ ...current, carId: "" }));
+          setError("Mẫu xe đã chọn không tồn tại hoặc đã hết hàng.");
+        } else {
+          setCar(selectedCar);
+          setForm((current) => ({
+            ...current,
+            carId: String(selectedCar.id),
+          }));
         }
-      } catch (loadError) {
-        console.error("Unable to load showroom booking form data:", loadError);
-        setError("Không thể tải thông tin xe hoặc showroom. Vui lòng thử lại.");
       }
-    };
+    } catch (loadError) {
+      console.error("Unable to load showroom booking form data:", loadError);
+      setError("Không thể tải thông tin xe hoặc showroom. Vui lòng thử lại.");
+    }
+  };
 
+  useEffect(() => {
     loadFormData();
   }, [carId]);
 
@@ -105,6 +111,14 @@ function Buying() {
       !form.timeSlot
     ) {
       setError("Vui lòng chọn xe, showroom, ngày và khung giờ hẹn.");
+      return;
+    }
+
+    const selectedCar = availableCars.find(
+      (item) => String(item.id) === String(form.carId),
+    );
+    if (!selectedCar) {
+      setError("Mẫu xe đã hết hàng hoặc không còn khả dụng.");
       return;
     }
 
@@ -140,6 +154,8 @@ function Buying() {
               </p>
               <h1 className="fw-bold mb-2">Đặt lịch đến showroom</h1>
 
+              {error && <Alert variant="danger">{error}</Alert>}
+
               <Form onSubmit={handleSubmit}>
                   <Row className="g-3">
                     <Col xs={12}>
@@ -152,7 +168,7 @@ function Buying() {
                           required
                         >
                           <option value="">Chọn mẫu xe</option>
-                          {cars.map((item) => (
+                          {availableCars.map((item) => (
                             <option key={item.id} value={item.id}>
                               {item.name}
                             </option>

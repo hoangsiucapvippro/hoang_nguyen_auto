@@ -249,13 +249,6 @@ function AdminCars() {
               <tr key={car.id}>
                 <td>
                   <div className="d-flex align-items-center gap-3">
-                    <img
-                      src={getCarImage(car)}
-                      alt=""
-                      width="72"
-                      height="48"
-                      className="rounded object-fit-cover"
-                    />
                     <div>
                       <div className="fw-semibold">{car.name}</div>
                     </div>
@@ -265,19 +258,17 @@ function AdminCars() {
                 <td>{getCategoryName(car.categoryId)}</td>
                 <td>{Number(car.price || 0).toLocaleString("vi-VN")} VNĐ</td>
                 <td>
-                  <Badge
-                    bg={car.status === "In Stock" ? "success" : "secondary"}
-                  >
+                  <Badge bg={car.status === "In Stock" ? "success" : "danger"}>
                     {car.status === "In Stock"
-                      ? "Còn hàng"
-                      : car.status || "Chưa cập nhật"}
+                      ? "In Stock"
+                      : "Out of Stock" || "Chưa cập nhật"}
                   </Badge>
                 </td>
                 <td>
                   <div className="d-flex justify-content-end gap-2">
                     <Button
                       size="sm"
-                      variant="outline-primary"
+                      variant="outline-success"
                       onClick={() => openEditForm(car)}
                       aria-label={`Sửa ${car.name}`}
                     >
@@ -496,19 +487,7 @@ function AdminCars() {
                   />
                 </Form.Group>
               </Col>
-              <Col xs={12}>
-                <Form.Group controlId="carImage">
-                  <Form.Label>
-                    <b>Đường dẫn hình ảnh</b>
-                  </Form.Label>
-                  <Form.Control
-                    name="image"
-                    value={form.image}
-                    onChange={handleFormChange}
-                    placeholder="URL hoặc đường dẫn trong thư mục public"
-                  />
-                </Form.Group>
-              </Col>
+
               <Col md={6}>
                 <Form.Group controlId="carStatus">
                   <Form.Label>

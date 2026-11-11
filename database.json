@@ -175,7 +175,6 @@
       "status": "In Stock"
     },
     {
-      "id": "5",
       "name": "VinFast VF8 Eco",
       "brandId": "1",
       "categoryId": "3",
@@ -192,10 +191,12 @@
         "Xanh dương"
       ],
       "description": "SUV điện D-SUV thông minh trang bị trợ lý ảo Viva và công nghệ ADAS.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "5"
     },
     {
-      "id": "6",
       "name": "VinFast VF8 Plus",
       "brandId": "1",
       "categoryId": "3",
@@ -213,7 +214,10 @@
         "Xanh VinFast"
       ],
       "description": "Phiên bản VF8 nâng cấp công suất 402 mã lực, nội thất da cao cấp.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "6"
     },
     {
       "id": "7",
@@ -298,7 +302,6 @@
       "status": "In Stock"
     },
     {
-      "id": "11",
       "name": "Toyota Corolla Altis 1.8HEV",
       "brandId": "2",
       "categoryId": "2",
@@ -315,7 +318,10 @@
         "Đen"
       ],
       "description": "Sedan C sang trọng, vận hành êm ái nhờ công nghệ xăng lai điện Hybrid.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "11"
     },
     {
       "id": "12",
@@ -337,7 +343,6 @@
       "status": "In Stock"
     },
     {
-      "id": "13",
       "name": "Toyota Camry 2.5Q",
       "brandId": "2",
       "categoryId": "2",
@@ -353,10 +358,12 @@
         "Trắng ngọc trai"
       ],
       "description": "Phiên bản Camry cao cấp động cơ 2.5L cực kỳ đằm chắc và uy quyền.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "13"
     },
     {
-      "id": "14",
       "name": "Toyota Fortuner Legender 2.8L 4x4",
       "brandId": "2",
       "categoryId": "1",
@@ -372,7 +379,10 @@
         "Đen"
       ],
       "description": "SUV 7 chỗ việt dại đích thực, khung gầm chắc chắn và khả năng vượt địa hình vô địch.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "14"
     },
     {
       "id": "15",
@@ -415,7 +425,6 @@
       "status": "In Stock"
     },
     {
-      "id": "17",
       "name": "Mercedes-Benz E 200 Exclusive",
       "brandId": "3",
       "categoryId": "2",
@@ -432,10 +441,12 @@
         "Nâu"
       ],
       "description": "Sedan doanh nhân lịch lãm với lưới tản nhiệt truyền thống logo nổi sang trọng.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "17"
     },
     {
-      "id": "18",
       "name": "Mercedes-Benz GLC 200 4MATIC",
       "brandId": "3",
       "categoryId": "1",
@@ -452,7 +463,10 @@
         "Xám Graphite"
       ],
       "description": "SUV hạng sang bán chạy bậc nhất với màn hình trung tâm cảm ứng 11.9 inch.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "18"
     },
     {
       "id": "19",
@@ -515,7 +529,6 @@
       "status": "In Stock"
     },
     {
-      "id": "22",
       "name": "BMW 330i M Sport",
       "brandId": "4",
       "categoryId": "2",
@@ -532,7 +545,10 @@
         "Trắng Alpine"
       ],
       "description": "Phiên bản 3-Series thể thao với gói khí động học M Sport và phanh hiệu năng cao.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "22"
     },
     {
       "id": "23",
@@ -595,7 +611,6 @@
       "status": "In Stock"
     },
     {
-      "id": "26",
       "name": "BMW i4 eDrive40",
       "brandId": "4",
       "categoryId": "3",
@@ -612,7 +627,10 @@
         "Xanh Portimao"
       ],
       "description": "Gran Coupé thuần điện đầu tiên của BMW với phạm vi di chuyển vượt trội lên đến 590 km.",
-      "status": "In Stock"
+      "image": "",
+      "status": "Out of Stock",
+      "isFeatured": false,
+      "id": "26"
     },
     {
       "id": "27",
@@ -723,6 +741,20 @@
       "userId": "2",
       "status": "Pending",
       "createdAt": "2026-11-10T21:29:14.663Z"
+    },
+    {
+      "carId": "1",
+      "showroomId": "2",
+      "customerName": "Nguyễn Bá Hoàng",
+      "phone": "0912345678",
+      "email": "an.nguyen@gmail.com",
+      "bookingDate": "2026-12-22",
+      "timeSlot": "09:00 - 10:30",
+      "notes": "",
+      "id": "3",
+      "userId": "2",
+      "status": "Pending",
+      "createdAt": "2026-11-11T01:00:48.817Z"
     }
   ],
   "showroomBookings": [
@@ -750,7 +782,7 @@
       "timeSlot": "10:30 - 12:00",
       "notes": "ád",
       "userId": "2",
-      "status": "Pending",
+      "status": "Completed",
       "createdAt": "2026-11-10T21:26:21.359Z",
       "id": 2
     },

@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Card, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -32,18 +33,16 @@ function Login() {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch(
-        `${API_USER}?username=${user.username}&password=${user.password}`,
-      );
-      if (!response.ok) {
-        throw new Error(`Login request failed with status ${response.status}`);
-      }
-
-      const users = await response.json();
+      const response = await axios.get(API_USER, {
+        params: {
+          username: user.username,
+          password: user.password,
+        },
+      });
+      const users = response.data;
       if (Array.isArray(users) && users.length > 0) {
         const logInUser = users[0];
         localStorage.setItem("user", JSON.stringify(logInUser));
-        alert("Dang nhap thanh cong");
 
         if (logInUser.role === "admin") {
           navigate("/hoangnguyen_auto");

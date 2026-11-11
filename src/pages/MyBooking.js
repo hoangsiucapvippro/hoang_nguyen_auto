@@ -14,6 +14,33 @@ function MyBooking() {
   const [showrooms, setShowrooms] = useState([]);
   const [error, setError] = useState("");
 
+  const loadBookings = async (userId) => {
+    setError("");
+
+    try {
+      const encodedUserId = encodeURIComponent(String(userId));
+      const [
+        testDrivesResponse,
+        showroomBookingsResponse,
+        carsResponse,
+        showroomsResponse,
+      ] = await Promise.all([
+        axios.get(`${API_URL}/testDrives?userId=${encodedUserId}`),
+        axios.get(`${API_URL}/showroomBookings?userId=${encodedUserId}`),
+        axios.get(`${API_URL}/cars`),
+        axios.get(`${API_URL}/showrooms`),
+      ]);
+
+      setTestDrives(testDrivesResponse.data);
+      setShowroomBookings(showroomBookingsResponse.data);
+      setCars(carsResponse.data);
+      setShowrooms(showroomsResponse.data);
+    } catch (loadError) {
+      console.error("Unable to load booking history:", loadError);
+      setError("Không thể tải lịch sử đăng ký. Vui lòng thử lại.");
+    }
+  };
+
   useEffect(() => {
     let user;
 
@@ -28,33 +55,7 @@ function MyBooking() {
       return;
     }
 
-    const loadBookings = async () => {
-      try {
-        const userId = encodeURIComponent(String(user.id));
-
-        const [
-          testDrivesResponse,
-          showroomBookingsResponse,
-          carsResponse,
-          showroomsResponse,
-        ] = await Promise.all([
-          axios.get(`${API_URL}/testDrives?userId=${userId}`),
-          axios.get(`${API_URL}/showroomBookings?userId=${userId}`),
-          axios.get(`${API_URL}/cars`),
-          axios.get(`${API_URL}/showrooms`),
-        ]);
-
-        setTestDrives(testDrivesResponse.data);
-        setShowroomBookings(showroomBookingsResponse.data);
-        setCars(carsResponse.data);
-        setShowrooms(showroomsResponse.data);
-      } catch (loadError) {
-        console.error("Unable to load booking history:", loadError);
-        setError("Không thể tải lịch sử đăng ký. Vui lòng thử lại.");
-      }
-    };
-
-    loadBookings();
+    loadBookings(user.id);
   }, []);
 
   const getShowroomName = (showroomId) =>

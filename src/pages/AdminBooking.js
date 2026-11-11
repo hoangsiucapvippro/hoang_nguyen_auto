@@ -1,12 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import {
-  Alert,
-  Badge,
-  Button,
-  Container,
-  Table,
-} from "react-bootstrap";
+import { Alert, Badge, Button, Container, Table } from "react-bootstrap";
 
 const API_URL = "http://localhost:9999";
 
@@ -94,7 +88,7 @@ function AdminBooking() {
         <thead className="table-dark">
           <tr>
             <th>STT</th>
-            <th>Mã đăng ký</th>
+
             <th>Khách hàng</th>
             <th>Mẫu xe</th>
             <th>Showroom</th>
@@ -117,7 +111,7 @@ function AdminBooking() {
               return (
                 <tr key={key}>
                   <td>{index + 1}</td>
-                  <td>#{booking.id}</td>
+
                   <td>{booking.customerName || "Chưa cập nhật"}</td>
                   <td>{getCarName(booking.carId)}</td>
                   <td>{getShowroomName(booking.showroomId)}</td>
@@ -126,8 +120,13 @@ function AdminBooking() {
                   <td>{booking.phone || "Chưa cập nhật"}</td>
                   <td>{booking.notes || "Không có"}</td>
                   <td>
-                    <Badge bg={isCompleted ? "success" : "warning"} text={isCompleted ? undefined : "dark"}>
-                      {isCompleted ? "Đã hoàn thành" : booking.status || "Đang chờ"}
+                    <Badge
+                      bg={isCompleted ? "success" : "secondary"}
+                      text={isCompleted ? undefined : "dark"}
+                    >
+                      {isCompleted
+                        ? "Đã hoàn thành"
+                        : "Chờ" || "Đang chờ"}
                     </Badge>
                   </td>
                   <td>
@@ -174,20 +173,13 @@ function AdminBooking() {
           className="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-2"
         >
           <span>{error}</span>
-          <Button
-            variant="outline-danger"
-            onClick={loadBookings}
-          >
+          <Button variant="outline-danger" onClick={loadBookings}>
             Tải lại
           </Button>
         </Alert>
       )}
       {actionError && (
-        <Alert
-          variant="danger"
-          dismissible
-          onClose={() => setActionError("")}
-        >
+        <Alert variant="danger" dismissible onClose={() => setActionError("")}>
           {actionError}
         </Alert>
       )}

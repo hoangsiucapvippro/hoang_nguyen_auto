@@ -10,7 +10,7 @@ function Header() {
 
   const handleLogout = () => {
     localStorage.removeItem("user");
-    alert("Đăng xuất thành công");
+
     navigate("/login");
   };
 
@@ -63,7 +63,7 @@ function Header() {
             )}
             {user && user.role === "user" && (
               <Nav.Link as={Link} to="/hoangnguyen_auto/my_bookings">
-                Lịch sử 
+                Lịch sử
               </Nav.Link>
             )}
           </div>
